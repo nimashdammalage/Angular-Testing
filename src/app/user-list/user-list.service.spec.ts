@@ -16,7 +16,7 @@ describe('UserListService', () => {
 
   // wait until async data is received and test
   it(`should return a user list with ${memberCount} members`, (done: DoneFn) => {
-    service.getAll().then(response => {
+    service.getAll().subscribe((response) => {
       expect(response.length).toBe(memberCount);
       done();
     });

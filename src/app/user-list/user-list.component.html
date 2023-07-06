@@ -8,5 +8,5 @@
 <a routerLink="/user"><button>View Customer</button></a>
 
 <ul class="user-list">
-  <li *ngFor="let user of users" class="user-list-item">{{ user.name }}</li>
+  <li *ngFor="let user of users$ | async" class="user-list-item">{{ user.name }}</li>
 </ul>
